@@ -1,0 +1,12 @@
+//_base.scss
+$font-primary:'Source Serif Pro', serif;
+$font-secondary: 'Source Sans Pro', sans-serif; 
+
+$color-primary: #000;
+$color-secondary: #fff;
+$color-accent: #343A40;
+
+body {
+  font: 100% $font-primary;
+  color: $color-primary;
+}

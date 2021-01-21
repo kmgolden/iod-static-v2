@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700;900&display=swap');
+
+
+body{ 
+	font-family:'Source Serif Pro', serif;
+	font-weight: 400;
+	color: #000;
+	letter-spacing: -.25px;
+	margin: 8rem;
+}
+
+main > h1{
+	font-weight: 900;
+	font-size: 72px;
+	margin: 0;
+	margin-bottom: 1rem;
+	line-height: 1.1em;
+}
+
+header{
+	margin-bottom: 4rem;
+}
+
+header > img{
+	width: 257px;
+}
+
+main > p{
+	font-size: 21px;
+	max-width: 61.8%;
+	margin: 0;
+}
+
+main > p > span{
+	font-weight: 700;
+}
+
+footer{
+	position: fixed;
+	bottom: 8rem;
+}
+
+footer > ul{
+	font-family: 'Source Sans Pro', sans-serif;
+	list-style-type: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul > li{
+	padding-bottom: 1rem;
+}
+
+footer > ul > li > a{
+	text-decoration: none;
+	color: #000;
+}
+
+#bg-image{
+	position: absolute; 
+	right: 0;
+	bottom: 0;
+}
+
+#bg-image > img{
+	width: 768px;
+}
+
+
+@media (max-width: 480px){
+	body{
+		margin: 1rem !important;
+	}
+
+	#bg-image{
+		display: none !important;
+	}
+}
