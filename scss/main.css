@@ -10,9 +10,10 @@ body{
 	font-weight: 400;
 	color: #000;
 	letter-spacing: -.25px;
-	min-height:100%;
+	min-height:100vh;
 	margin:0;
-	display: table;
+	display: flex;
+	flex-direction: column;
 }
 
 main > h1{
@@ -32,6 +33,7 @@ header > img{
 }
 
 main{
+	flex: 1;
 	margin: auto 8rem auto 8rem;
 }
 
@@ -47,12 +49,12 @@ main > p > span{
 }
 
 footer{
-	display: table-footer-group;
+	flex-shrink:0;
 }
 
 
 footer > .inner{
-	margin: 4rem 8rem auto 8rem;
+	margin: 4rem 8rem 8rem 8rem;
 }
 
 footer > .inner > ul{
@@ -96,7 +98,7 @@ ul > li > a{
 	}
 
 	footer>.inner{
-		margin-bottom:0;
+		margin-bottom: 2rem;
 	}
 
 	#bg-image{
@@ -118,9 +120,6 @@ ul > li > a{
 		color: white;
 	}*/
 
-	footer>.inner{
-		margin-bottom: 0;
-	}
 	
 /*	footer>.inner>ul>li>a{
 		color: white;
