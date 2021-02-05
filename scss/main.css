@@ -1,13 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700;900&display=swap');
 
+html{
+	height: 100%;
+}
 
 body{ 
 	font-family:'Source Serif Pro', serif;
 	font-weight: 400;
 	color: #000;
 	letter-spacing: -.25px;
-	margin: 8rem;
+	min-height:100%;
+	margin:0;
+	display: table;
 }
 
 main > h1{
@@ -15,16 +20,21 @@ main > h1{
 	font-size: 72px;
 	margin: 0;
 	margin-bottom: 1rem;
-	line-height: 1.1em;
+	line-height: 0.9em;
 }
 
 header{
-	margin-bottom: 4rem;
+	margin: 8rem 8rem 4rem 8rem;
 }
 
 header > img{
 	width: 257px;
 }
+
+main{
+	margin: auto 8rem auto 8rem;
+}
+
 
 main > p{
 	font-size: 21px;
@@ -37,11 +47,15 @@ main > p > span{
 }
 
 footer{
-	position: fixed;
-	bottom: 8rem;
+	display: table-footer-group;
 }
 
-footer > ul{
+
+footer > .inner{
+	margin: 4rem 8rem auto 8rem;
+}
+
+footer > .inner > ul{
 	font-family: 'Source Sans Pro', sans-serif;
 	list-style-type: none;
 	text-decoration: none;
@@ -53,28 +67,74 @@ ul > li{
 	padding-bottom: 1rem;
 }
 
-footer > ul > li > a{
+ul > li > a{
 	text-decoration: none;
 	color: #000;
 }
 
 #bg-image{
-	position: absolute; 
-	right: 0;
-	bottom: 0;
+	position: fixed; 
+	right: -40px;
+	bottom: -40px;
+	overflow: hidden;
+	z-index: -1000;
+	opacity: 0.6;
 }
 
 #bg-image > img{
 	width: 768px;
 }
 
+@media (max-width: 1024px){
 
-@media (max-width: 480px){
-	body{
-		margin: 1rem !important;
+	header, main, footer>.inner{
+		margin: 4rem;
+	}
+	
+	main>h1{
+		font-size:60px;
+	}
+
+	footer>.inner{
+		margin-bottom:0;
 	}
 
 	#bg-image{
-		display: none !important;
+		opacity: 0.1;
+	}
+}
+
+@media (max-width: 480px){
+	header, main, footer>.inner{
+		margin: 2rem;
+	}
+	
+	header{
+		margin-bottom: 4rem;
+	}
+
+/*	footer{
+		background-color: black;
+		color: white;
+	}*/
+
+	footer>.inner{
+		margin-bottom: 0;
+	}
+	
+/*	footer>.inner>ul>li>a{
+		color: white;
+	}*/
+
+	main>h1{
+		font-size: 48px;
+	}	
+	
+	main>p{
+		max-width: 100%;
+	}
+
+	#bg-image{
+		bottom: -350px;
 	}
 }
